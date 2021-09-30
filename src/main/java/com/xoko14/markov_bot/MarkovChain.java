@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
  
 public class MarkovChain {
     private ArrayList<Word> words;
@@ -15,7 +15,7 @@ public class MarkovChain {
         String contenido = "";
 
         try {
-            contenido = new String(Files.readAllBytes(Paths.get(file)));
+            contenido = new String(Files.readAllBytes(Path.of(file)));
             contenido = contenido.replaceAll("[\\n\\t]", "");
             //System.out.println(contenido);
         } catch (IOException e) {

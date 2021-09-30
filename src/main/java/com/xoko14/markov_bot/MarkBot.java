@@ -13,11 +13,11 @@ public class MarkBot extends AbilityBot{
     public MarkBot(String token, String username) {
         super(token, username);
         System.out.println("Training...");
-        hp = new MarkovChain("./traindata/azkaban.txt");
-        ecdlr = new MarkovChain("./traindata/archreyes.txt");
-        empezar = new MarkovChain("./traindata/empezarAgain.txt");
-        bee = new MarkovChain("./traindata/bee.txt");
-        shrek = new MarkovChain("./traindata/shrek.txt");
+        hp = new MarkovChain("./trainData/azkaban.txt");
+        ecdlr = new MarkovChain("./trainData/archreyes.txt");
+        empezar = new MarkovChain("./trainData/empezarAgain.txt");
+        bee = new MarkovChain("./trainData/bee.txt");
+        shrek = new MarkovChain("./trainData/shrek.txt");
         System.out.println("Done training!");
 
       }
