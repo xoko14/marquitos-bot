@@ -11,10 +11,13 @@ public class BotMain {
         try {
             // Create the TelegramBotsApi object to register your bots
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
-            Dotenv dotenv = Dotenv.load();
+            Dotenv dotenv = Dotenv
+                                .configure()
+                                .directory("./")
+                                .load();
   
             // Register your newly created AbilityBot
-            botsApi.registerBot(new MarkBot(dotenv.get("BOT_TOKEN"), dotenv.get("BOT_KEY")));
+            botsApi.registerBot(new MarkBot(dotenv.get("BOT_TOKEN"), dotenv.get("BOT_NAME")));
           } catch (TelegramApiException e) {
               e.printStackTrace();
           }

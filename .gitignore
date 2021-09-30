@@ -1,5 +1,6 @@
 .env
 traindata/
+marquitos_bot
 
 target/
 pom.xml.tag
